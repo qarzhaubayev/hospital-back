@@ -1,0 +1,45 @@
+{% extends 'accounts/main.html' %}
+
+{% block content%}
+
+<div class = "row">
+    <div class = "col-md-5">
+        <h5>Available Services</h5> <!--"Patient"-->
+        <hr>
+        <div class = "card card-body">
+                <a class = "btn-primary btn-sm btn-block" href=""> See services
+                </a>
+                <table class="table table-sm">
+                    <tr>
+                        <th></th>
+                        <th>Services</th>
+                        <th>Doctors</th>
+                    </tr>
+
+                </table>
+        </div>
+    </div>
+    <div class = "col-md-8">
+        <h5>Last Services</h5> <!--"Patient"-->
+        <hr>
+        <div class = "card card-body">
+                <a class = "btn-primary btn-sm btn-block" href=""> Appoint service
+                </a>
+                <table class="table table-sm">
+                    <tr>
+                        <th></th>
+                        <th>Services</th>
+                        <th>Doctors</th>
+                        <th>Data Ordered</th>
+                        <th>Status</th>
+                        
+                    </tr>
+                </table>
+        </div>
+    </div>
+
+</div>
+
+
+
+{% endblock %}
