@@ -1,9 +1,8 @@
-# Create your views here.
 from django.shortcuts import Http404
 from django.http import HttpResponse,JsonResponse
-
-
-
+from rest_framework.authtoken.views  import ObtainAuthToken
+from rest_framework.authtoken.models import Token
+from rest_framework.response         import Response
 
 from rest_framework.pagination     import LimitOffsetPagination
 from rest_framework.response       import Response
@@ -14,6 +13,33 @@ from rest_framework import generics
 
 from .serializers import *
 from .models import *
+
+
+# from doctor.models import Doctor
+# from patient.models import Patient
+
+class UserObtainAuthToken(ObtainAuthToken):
+
+    def post(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        print(serializer.errors)
+        user           = serializer.validated_data['user']
+        print(user.iin_num)
+        token, created = Token.objects.get_or_create(user=user)
+        try:
+            doctor = Doctor.objects.get(iin_num = user.iin_num)
+            return Response({'token': token.key, 'who': 'doctor', 'user': user.iin_num})
+        except Doctor.DoesNotExist:
+            try:
+                patient = Patient.objects.get(iin_num = user.iin_num)
+                return Response({'token': token.key, 'who': 'patient', 'user_iin': user.iin_num})
+            except Patient.DoesNotExist:
+                return Response({'token': token.key})
+
+
+obtain_auth_token = UserObtainAuthToken.as_view()
+
 
 
 class DoctorIINList(generics.ListAPIView):
@@ -88,6 +114,55 @@ class DoctorRUD(generics.RetrieveUpdateDestroyAPIView):
         except Doctor.DoesNotExist:
             raise Http404('Not found')
         serializer = DoctorSerializer(doctor, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse(serializer.data)
+        print(serializer.errors)
+        return JsonResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class PatientList(generics.ListCreateAPIView):
+    queryset               = Patient.objects.all()
+    serializer_class       = PatientSerializer
+    authentication_classes = [TokenAuthentication, BasicAuthentication]
+    permission_classes     = [IsAdminUser,]
+
+    def get(self, request, format=None):
+        print(request.auth)
+        patients = Patient.objects.all()
+        serializer = PatientSerializer(patients, many=True)
+        return JsonResponse(serializer.data, safe=False)
+
+    def post(self, request, format=None):
+        serializer = PatientSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse(serializer.data, status=status.HTTP_201_CREATED)
+
+        print(serializer.errors)
+        return JsonResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class PatientRUD(generics.RetrieveUpdateDestroyAPIView):
+    queryset               = Patient.objects.all()
+    serializer_class       = PatientSerializer
+    authentication_classes = [TokenAuthentication]
+    permission_classes     = [IsAdminUser,]
+
+    def get(self, request, pk, format=None):
+        print(request.auth)
+        try:
+            patient = Patient.objects.get(iin = pk)
+        except Patient.DoesNotExist:
+            raise Http404('Not found')
+        serializer = PatientSerializer(patient)
+        return JsonResponse(serializer.data, safe=False)
+
+    def put(self, request, pk, format=None):
+        try:
+            patient = Patient.objects.get(iin = pk)
+        except Patient.DoesNotExist:
+            raise Http404('Not found')
+        serializer = PatientSerializer(patient, data=request.data, partial=True)
         if serializer.is_valid():
             serializer.save()
             return JsonResponse(serializer.data)

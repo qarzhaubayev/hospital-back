@@ -40,9 +40,9 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'rest_framework',
     'corsheaders',
-    'account',
-    'doctor',
-    'patient',
+    'accounts',
+    # 'doctor',
+    # 'patient',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -111,7 +111,7 @@ DATE_INPUT_FORMATS = ('%d-%m-%Y','%Y-%m-%d')
 MEDIA_URL = "/api/static/"
 MEDIA_ROOT = BASE_DIR / "static"
 
-AUTH_USER_MODEL = 'account.User'
+AUTH_USER_MODEL = 'accounts.User'
 
 
 # Password validation

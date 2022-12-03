@@ -17,13 +17,13 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
-from patient import urls as patient_url
-from doctor import urls as doctor_url
-from account import urls as account_url
+# from patient import urls as patient_url
+# from doctor import urls as doctor_url
+from accounts import urls as account_url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(patient_url)),
-    path('api/', include(doctor_url)),
+    # path('api/', include(patient_url)),
+    # path('api/', include(doctor_url)),
     path('api/', include(account_url)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
