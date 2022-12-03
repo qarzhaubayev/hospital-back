@@ -28,7 +28,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     last_login_date  = models.DateTimeField(null=True)
     is_active   = models.BooleanField(default=True)
     is_staff    = models.BooleanField(default=False)
-    iin_number         = models.CharField(max_length=12, primary_key=True)
+    iin_num         = models.CharField(max_length=12, primary_key=True)
 
     USERNAME_FIELD = 'iin_num'
     REQUIRED_FIELDS = []
@@ -103,7 +103,7 @@ class Doctor(models.Model):
     price_of_appointment  =  models.IntegerField(validators = [MaxValueValidator(99999), MinValueValidator(1000)], null= True)
     contacts = models.IntegerField(max_length=12)
     exp = models.CharField(max_length= 3)
-    homepage_URL =  models.CharField(null=True)
+    homepage_URL =  models.CharField(max_length= 200,null=True)
     address =  models.CharField(max_length = 200, null = True)
     
     USERNAME_FIELD = 'iin_num'
