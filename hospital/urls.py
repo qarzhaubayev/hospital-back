@@ -20,9 +20,15 @@ from django.conf import settings
 # from patient import urls as patient_url
 # from doctor import urls as doctor_url
 from accounts import urls as account_url
+from .import views 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('homepage', views.homepage,name='homepage'),
+    path('about/', views.aboutpage, name= 'aboutpage'),
+    path('loginpage/', views.loginpage, name= 'loginpage'),
+    path('createaccount/', views.createaccountpage, name= 'createaccountpage'),
+    path('login_admin/', views.login_admin, name= 'login_admin'),
     # path('api/', include(patient_url)),
     # path('api/', include(doctor_url)),
     path('api/', include(account_url)),

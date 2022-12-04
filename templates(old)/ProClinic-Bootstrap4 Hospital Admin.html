@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://www.konnectplugins.com/proclinic/Vertical/index.html -->
+<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ProClinic-Bootstrap4 Hospital Admin</title>
+	<!-- Fav  Icon Link -->
+	<link rel="shortcut icon" type="image/png" href="https://www.konnectplugins.com/proclinic/Vertical/images/fav.png">
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="./ProClinic-Bootstrap4 Hospital Admin_files/bootstrap.min.css">
+	<!-- themify icons CSS -->
+	<link rel="stylesheet" href="./ProClinic-Bootstrap4 Hospital Admin_files/themify-icons.css">
+	<!-- Animations CSS -->
+	<link rel="stylesheet" href="./ProClinic-Bootstrap4 Hospital Admin_files/animate.css">
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="./ProClinic-Bootstrap4 Hospital Admin_files/styles.css">
+	<link rel="stylesheet" href="./ProClinic-Bootstrap4 Hospital Admin_files/red.css" id="style_theme">
+	<link rel="stylesheet" href="./ProClinic-Bootstrap4 Hospital Admin_files/responsive.css">
+	<!-- morris charts -->
+	<link rel="stylesheet" href="./ProClinic-Bootstrap4 Hospital Admin_files/morris.css">
+	<!-- jvectormap -->
+	<link rel="stylesheet" href="./ProClinic-Bootstrap4 Hospital Admin_files/jquery-jvectormap.css">
+
+	<script src="./ProClinic-Bootstrap4 Hospital Admin_files/modernizr.min.js.download"></script>
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1026.0" data-gr-ext-installed="">
+	<!-- Pre Loader -->
+	<div class="loading" style="display: none;">
+		<div class="spinner">
+			<div class="double-bounce1"></div>
+			<div class="double-bounce2"></div>
+		</div>
+	</div>
+	<!--/Pre Loader -->
+	<!-- Color Changer -->
+	<div class="theme-settings" id="switcher">
+		<span class="theme-click">
+			<span class="ti-settings"></span>
+		</span>
+		<span class="theme-color theme-default" data-color="green"></span>
+		<span class="theme-color theme-blue" data-color="blue"></span>
+		<span class="theme-color theme-red theme-active" data-color="red"></span>
+		<span class="theme-color theme-violet" data-color="violet"></span>
+		<span class="theme-color theme-yellow" data-color="yellow"></span>
+	</div>
+	<!-- /Color Changer -->
+	<div class="wrapper">
+		<!-- Sidebar -->
+		<nav id="sidebar" class="proclinic-bg">
+			<div class="sidebar-header">
+				<a href="https://www.konnectplugins.com/proclinic/Vertical/index.html"><img src="./ProClinic-Bootstrap4 Hospital Admin_files/logo.png" class="logo" alt="logo"></a>
+			</div>
+			<ul class="list-unstyled components">
+				<li class="active">
+					<a href="https://www.konnectplugins.com/proclinic/Vertical/index.html#nav-dashboard" data-toggle="collapse" aria-expanded="true">
+						<span class="ti-home"></span> Dashboard
+					</a>
+					<ul class="collapse list-unstyled show" id="nav-dashboard">
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/index.html">Vertical</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical-RTL/index.html">Vertical RTL</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Horizontal/index.html">Horizantal</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="https://www.konnectplugins.com/proclinic/Vertical/index.html#nav-patients" data-toggle="collapse" aria-expanded="false">
+						<span class="ti-wheelchair"></span> Patients
+					</a>
+					<ul class="collapse list-unstyled" id="nav-patients">
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/add-patient.html">Add Patient</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/patients.html">All Patients</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/about-patient.html">Patient Details</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/edit-patient.html">Edit Patient</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="https://www.konnectplugins.com/proclinic/Vertical/index.html#nav-doctors" data-toggle="collapse" aria-expanded="false">
+						<span class="ti-user"></span> Doctors
+					</a>
+					<ul class="collapse list-unstyled" id="nav-doctors">
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/add-doctor.html">Add Doctor</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/doctors.html">All Doctors</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/about-doctor.html">Doctor Details</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/edit-doctor.html">Edit Doctor</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="https://www.konnectplugins.com/proclinic/Vertical/index.html#nav-appointment" data-toggle="collapse" aria-expanded="false">
+						<span class="ti-pencil-alt"></span> Appointments
+					</a>
+					<ul class="collapse list-unstyled" id="nav-appointment">
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/add-appointment.html">Add Appointment</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/appointments.html">All Appointments</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/about-appointment.html">Appointment Details</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/edit-appointment.html">Edit Appointment</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="https://www.konnectplugins.com/proclinic/Vertical/index.html#nav-payment" data-toggle="collapse" aria-expanded="false">
+						<span class="ti-money"></span> Payments
+					</a>
+					<ul class="collapse list-unstyled" id="nav-payment">
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/add-payment.html">Add Payment</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/payments.html">All Payments</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/about-payment.html">Payment Invoice</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="https://www.konnectplugins.com/proclinic/Vertical/index.html#nav-rooms" data-toggle="collapse" aria-expanded="false">
+						<span class="ti-key"></span> Room Allotments
+					</a>
+					<ul class="collapse list-unstyled" id="nav-rooms">
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/add-room.html">Add Room Allotment</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/rooms.html">All Rooms</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/edit-room.html">Edit Room Allotment</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-level-one">
+					<a href="https://www.konnectplugins.com/proclinic/Vertical/index.html#nav-uiKit" data-toggle="collapse" aria-expanded="false">
+						<span class="ti-layout-tab"></span> UI Kit
+					</a>
+					<ul class="list-unstyled collapse" aria-expanded="true" id="nav-uiKit">
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/typography.html">Typography</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/buttons.html">Buttons</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/cards.html">Cards</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/tabs.html">Tabs</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/accordions.html">Accordions</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/modals.html">Modals</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/lists.html">Lists &amp; Media Object</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/grid.html">Grid</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/progress-bars.html">Progress Bars</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/notifications-alerts.html">Notifications &amp; Alerts</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/pagination.html">Pagination</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/carousel.html">Carousel</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="https://www.konnectplugins.com/proclinic/Vertical/tables.html">
+						<span class="ti-layout-menu-v"></span> Tables
+					</a>
+				</li>
+				<li>
+					<a href="https://www.konnectplugins.com/proclinic/Vertical/index.html#nav-charts" data-toggle="collapse" aria-expanded="false">
+						<span class="ti-pie-chart"></span> Charts
+					</a>
+					<ul class="collapse list-unstyled" id="nav-charts">
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/charts-1.html">Morris</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/charts-2.html">Flot</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="https://www.konnectplugins.com/proclinic/Vertical/index.html#nav-maps" data-toggle="collapse" aria-expanded="false">
+						<span class="ti-location-pin"></span> Maps
+					</a>
+					<ul class="collapse list-unstyled" id="nav-maps">
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/map-1.html">Google Maps</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/map-2.html">Vector Maps</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="https://www.konnectplugins.com/proclinic/Vertical/forms.html">
+						<span class="ti-layout-media-overlay-alt-2"></span> Forms
+					</a>
+				</li>
+				<li>
+					<a href="https://www.konnectplugins.com/proclinic/Vertical/index.html#nav-icons" data-toggle="collapse" aria-expanded="false">
+						<span class="ti-themify-favicon"></span> icons
+					</a>
+					<ul class="collapse list-unstyled" id="nav-icons">
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/font-awesome.html">Font Awesome </a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/themify.html">Themify</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="https://www.konnectplugins.com/proclinic/Vertical/index.html#nav-pages" data-toggle="collapse" aria-expanded="false">
+						<span class="ti-file"></span> Other Pages
+					</a>
+					<ul class="collapse list-unstyled" id="nav-pages">
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/login.html">Login </a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/sign-up.html">Sign Up</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/404.html">404</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/blank-page.html">Blank Page</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/pricing.html">Pricing</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/faq.html">FAQ</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/invoice.html">Invoice</a>
+						</li>
+						<li>
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/blank-page.html">Coming Soon</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<div class="nav-help animated fadeIn">
+				<h5><span class="ti-comments"></span> Need Help</h5>
+				<h6>
+					<span class="ti-mobile"></span> +1 1234 567 890</h6>
+				<h6>
+					<span class="ti-email"></span> email@site.com</h6>
+				<p class="copyright-text">Copy rights © 2018</p>
+			</div>
+		</nav>
+		<!-- /Sidebar -->
+		<!-- Page Content -->
+		<div id="content">
+			<!-- Top Navigation -->
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="responsive-logo">
+						<a href="https://www.konnectplugins.com/proclinic/Vertical/index.html"><img src="./ProClinic-Bootstrap4 Hospital Admin_files/logo-dark.png" class="logo" alt="logo"></a>
+					</div>
+					<ul class="nav">
+						<li class="nav-item">
+							<span class="ti-menu" id="sidebarCollapse"></span>
+						</li>
+						<li class="nav-item">
+							<span title="Fullscreen" class="ti-fullscreen fullscreen"></span>
+						</li>
+						<li class="nav-item">
+							<a data-toggle="modal" data-target=".proclinic-modal-lg">
+								<span class="ti-search"></span>
+							</a>
+							<div class="modal fade proclinic-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+								<div class="modal-dialog modal-lorvens">
+									<div class="modal-content proclinic-box-shadow2">
+										<div class="modal-header">
+											<h5 class="modal-title">Search Patient/Doctor:</h5>
+											<span class="ti-close" data-dismiss="modal" aria-label="Close">
+											</span>
+										</div>
+										<div class="modal-body">
+											<form>
+												<div class="form-group">
+													<input type="text" class="form-control" id="search-term" placeholder="Type text here">
+													<button type="button" class="btn btn-lorvens proclinic-bg">
+														<span class="ti-location-arrow"></span> Search</button>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="https://www.konnectplugins.com/proclinic/Vertical/index.html#" role="button" aria-haspopup="true" aria-expanded="false">
+								<span class="ti-announcement"></span>
+							</a>
+							<div class="dropdown-menu proclinic-box-shadow2 notifications animated flipInY">
+								<h5>Notifications</h5>
+								<a class="dropdown-item" href="https://www.konnectplugins.com/proclinic/Vertical/index.html#">
+									<span class="ti-wheelchair"></span> New Patient Added</a>
+								<a class="dropdown-item" href="https://www.konnectplugins.com/proclinic/Vertical/index.html#">
+									<span class="ti-money"></span> Patient payment done</a>
+								<a class="dropdown-item" href="https://www.konnectplugins.com/proclinic/Vertical/index.html#">
+									<span class="ti-time"></span>Patient Appointment booked</a>
+								<a class="dropdown-item" href="https://www.konnectplugins.com/proclinic/Vertical/index.html#">
+									<span class="ti-wheelchair"></span> New Patient Added</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="https://www.konnectplugins.com/proclinic/Vertical/index.html#" role="button" aria-haspopup="true" aria-expanded="false">
+								<span class="ti-user"></span>
+							</a>
+							<div class="dropdown-menu proclinic-box-shadow2 profile animated flipInY">
+								<h5>John Willing</h5>
+								<a class="dropdown-item" href="https://www.konnectplugins.com/proclinic/Vertical/index.html#">
+									<span class="ti-settings"></span> Settings</a>
+								<a class="dropdown-item" href="https://www.konnectplugins.com/proclinic/Vertical/index.html#">
+									<span class="ti-help-alt"></span> Help</a>
+								<a class="dropdown-item" href="https://www.konnectplugins.com/proclinic/Vertical/index.html#">
+									<span class="ti-power-off"></span> Logout</a>
+							</div>
+						</li>
+					</ul>
+				
+				</div>
+			</nav>
+			<!-- /Top Navigation -->
+			<!-- Breadcrumb -->
+			<!-- Page Title -->
+			<div class="row no-margin-padding">
+				<div class="col-md-6">
+					<h3 class="block-title">Quick Statistics</h3>
+				</div>
+				<div class="col-md-6">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item">
+							<a href="https://www.konnectplugins.com/proclinic/Vertical/index.html">
+								<span class="ti-home"></span>
+							</a>
+						</li>
+						<li class="breadcrumb-item active">Dashboard</li>
+					</ol>
+				</div>
+			</div>
+			<!-- /Page Title -->
+
+			<!-- /Breadcrumb -->
+			<!-- Main Content -->
+			<div class="container-fluid home">
+
+
+				<div class="row">
+					<!-- Widget Item -->
+					<div class="col-md-4">
+						<div class="widget-area proclinic-box-shadow color-red">
+							<div class="widget-left">
+								<span class="ti-user"></span>
+							</div>
+							<div class="widget-right">
+								<h4 class="wiget-title">Patients</h4>
+								<span class="numeric color-red">348</span>
+								<p class="inc-dec mb-0"><span class="ti-angle-up"></span> +20% Increased</p>
+							</div>
+						</div>
+					</div>
+					<!-- /Widget Item -->
+					<!-- Widget Item -->
+					<div class="col-md-4">
+						<div class="widget-area proclinic-box-shadow color-green">
+							<div class="widget-left">
+								<span class="ti-bar-chart"></span>
+							</div>
+							<div class="widget-right">
+								<h4 class="wiget-title">Appointments</h4>
+								<span class="numeric color-green">1585</span>
+								<p class="inc-dec mb-0"><span class="ti-angle-down"></span> -15% Decreased</p>
+							</div>
+						</div>
+					</div>
+					<!-- /Widget Item -->
+					<!-- Widget Item -->
+					<div class="col-md-4">
+						<div class="widget-area proclinic-box-shadow color-yellow">
+							<div class="widget-left">
+								<span class="ti-money"></span>
+							</div>
+							<div class="widget-right">
+								<h4 class="wiget-title">Total Revenue</h4>
+								<span class="numeric color-yellow">$7300</span>
+								<p class="inc-dec mb-0"><span class="ti-angle-up"></span> +10% Increased</p>
+							</div>
+						</div>
+					</div>
+					<!-- /Widget Item -->
+				</div>
+
+				<div class="row">
+					<!-- Widget Item -->
+					<div class="col-md-6">
+						<div class="widget-area-2 proclinic-box-shadow">
+							<h3 class="widget-title">Appointments Year by Year</h3>
+							<div id="lineMorris" class="chart-home" style="position: relative; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg height="255" version="1.1" width="543" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative; top: -0.9px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><text x="35.86250114440918" y="216.39999961853027" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal"><tspan dy="4.400002479553223" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0</tspan></text><path fill="none" stroke="#eef0f2" d="M48.36250114440918,216.39999961853027H517.6" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="35.86250114440918" y="168.5499997138977" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal"><tspan dy="4.399993419647217" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">17.5</tspan></text><path fill="none" stroke="#eef0f2" d="M48.36250114440918,168.5499997138977H517.6" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="35.86250114440918" y="120.69999980926514" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal"><tspan dy="4.399999618530273" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">35</tspan></text><path fill="none" stroke="#eef0f2" d="M48.36250114440918,120.69999980926514H517.6" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="35.86250114440918" y="72.84999990463257" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal"><tspan dy="4.399998188018799" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">52.5</tspan></text><path fill="none" stroke="#eef0f2" d="M48.36250114440918,72.84999990463257H517.6" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="35.86250114440918" y="25" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal"><tspan dy="4.399999618530273" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">70</tspan></text><path fill="none" stroke="#eef0f2" d="M48.36250114440918,25H517.6" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="431.40187064818224" y="228.89999961853027" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal" transform="matrix(1,0,0,1,0,6.8)"><tspan dy="4.400002479553223" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2018</tspan></text><text x="223.04215400305978" y="228.89999961853027" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal" transform="matrix(1,0,0,1,0,6.8)"><tspan dy="4.400002479553223" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2017</tspan></text><path fill="none" stroke="#e57498" d="M48.36250114440918,161.71428544180733C61.49201753574566,165.1321425778525,87.75105031841863,180.17071397645134,100.88056670975512,175.38571398598808C114.0100831010916,170.6007139955248,140.26911588376456,120.68505835730427,153.39863227510105,123.43428551810128C166.3854365317491,126.15362977497657,192.35904504504518,196.22897755928463,205.34584930169322,197.25999965667725C218.18994142365284,198.27969184091174,243.87812566757205,135.35547073766986,256.72221778953167,131.63714264460972C269.85173418086816,127.83618503837046,296.1107669635411,180.51249969005582,309.2402833548776,167.1828568594796C322.3697997462141,153.8532140289034,348.628832528887,29.81114753139475,361.7583489202235,25C374.74515317687155,20.241147550468238,400.71876169016764,110.00078515024192,413.7055659468157,128.90285693577357C426.5496580687753,147.59721364673894,452.2378423126945,182.48434034546653,465.0819344346541,175.38571398598808C478.2114508259906,168.12934037407678,504.4704836086635,97.45857128415787,517.6,71.48285705021448" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><circle cx="48.36250114440918" cy="161.71428544180733" r="4" fill="#e57498" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="100.88056670975512" cy="175.38571398598808" r="4" fill="#e57498" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="153.39863227510105" cy="123.43428551810128" r="4" fill="#e57498" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="205.34584930169322" cy="197.25999965667725" r="4" fill="#e57498" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="256.72221778953167" cy="131.63714264460972" r="4" fill="#e57498" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="309.2402833548776" cy="167.1828568594796" r="4" fill="#e57498" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="361.7583489202235" cy="25" r="4" fill="#e57498" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="413.7055659468157" cy="128.90285693577357" r="4" fill="#e57498" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="465.0819344346541" cy="175.38571398598808" r="4" fill="#e57498" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="517.6" cy="71.48285705021448" r="4" fill="#e57498" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle></svg><div class="morris-hover morris-default-style" style="left: 433.2px; top: 2px; display: none;"><div class="morris-hover-row-label">2018 Q2</div><div class="morris-hover-point" style="color: #E57498">
+  Appointments:
+  53
+</div></div></div>
+						</div>
+					</div>
+					<!-- /Widget Item -->
+					<!-- Widget Item -->
+					<div class="col-md-6">
+						<div class="widget-area-2 proclinic-box-shadow">
+							<h3 class="widget-title"> Patients Year by Year</h3>
+							<div id="barMorris" class="chart-home" style="position: relative; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg height="255" version="1.1" width="543" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative; left: -0.6px; top: -0.9px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><text x="25.850000381469727" y="216.39999961853027" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal"><tspan dy="4.400002479553223" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0</tspan></text><path fill="none" stroke="#eef0f2" d="M38.35000038146973,216.39999961853027H517.6" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="25.850000381469727" y="168.5499997138977" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal"><tspan dy="4.399993419647217" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">15</tspan></text><path fill="none" stroke="#eef0f2" d="M38.35000038146973,168.5499997138977H517.6" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="25.850000381469727" y="120.69999980926514" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal"><tspan dy="4.399999618530273" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">30</tspan></text><path fill="none" stroke="#eef0f2" d="M38.35000038146973,120.69999980926514H517.6" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="25.850000381469727" y="72.84999990463257" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal"><tspan dy="4.399998188018799" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">45</tspan></text><path fill="none" stroke="#eef0f2" d="M38.35000038146973,72.84999990463257H517.6" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="25.850000381469727" y="25" text-anchor="end" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal"><tspan dy="4.399999618530273" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">60</tspan></text><path fill="none" stroke="#eef0f2" d="M38.35000038146973,25H517.6" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="483.36785717010497" y="228.89999961853027" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal" transform="matrix(1,0,0,1,0,6.8)"><tspan dy="4.400002479553223" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2018</tspan></text><text x="346.4392858505249" y="228.89999961853027" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal" transform="matrix(1,0,0,1,0,6.8)"><tspan dy="4.400002479553223" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2016</tspan></text><text x="209.51071453094482" y="228.89999961853027" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal" transform="matrix(1,0,0,1,0,6.8)"><tspan dy="4.400002479553223" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2014</tspan></text><text x="72.58214321136475" y="228.89999961853027" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 12px sans-serif;" font-size="12px" font-family="sans-serif" font-weight="normal" transform="matrix(1,0,0,1,0,6.8)"><tspan dy="4.400002479553223" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2012</tspan></text><rect x="55.46607179641724" y="152.59999974568686" width="34.23214282989502" height="63.799999872843415" r="0" rx="0" ry="0" fill="#ff7d00" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="123.93035745620728" y="72.84999990463257" width="34.23214282989502" height="143.5499997138977" r="0" rx="0" ry="0" fill="#ff7d00" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="192.3946431159973" y="37.7599999745687" width="34.23214282989502" height="178.63999964396157" r="0" rx="0" ry="0" fill="#ff7d00" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="260.8589287757873" y="104.74999984105429" width="34.23214282989502" height="111.64999977747598" r="0" rx="0" ry="0" fill="#ff7d00" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="329.32321443557737" y="158.97999973297118" width="34.23214282989502" height="57.41999988555909" r="0" rx="0" ry="0" fill="#ff7d00" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="397.7875000953674" y="127.07999979654949" width="34.23214282989502" height="89.31999982198079" r="0" rx="0" ry="0" fill="#ff7d00" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="466.2517857551574" y="152.59999974568686" width="34.23214282989502" height="63.799999872843415" r="0" rx="0" ry="0" fill="#ff7d00" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect></svg><div class="morris-hover morris-default-style" style="display: none;"></div></div>
+						</div>
+					</div>
+					<!-- /Widget Item -->
+				</div>
+
+				<div class="row">
+					<!-- Widget Item -->
+					<div class="col-md-12">
+						<div class="widget-area-2 proclinic-box-shadow">
+							<h3 class="widget-title">Appointments</h3>
+							<div class="table-responsive">
+								<table class="table table-bordered table-striped">
+									<thead>
+										<tr>
+											<th>Patient Name</th>
+											<th>Doctor</th>
+											<th>Check-Up</th>
+											<th>Date</th>
+											<th>Time</th>
+											<th>Status</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Rajesh</td>
+											<td>Manoj Kumar</td>
+											<td>Dental</td>
+											<td>12-10-2018</td>
+											<td>12:10PM</td>
+											<td>
+												<span class="badge badge-success">Completed</span>
+											</td>
+										</tr>
+										<tr>
+											<td>Riya</td>
+											<td>Daniel </td>
+											<td>Ortho</td>
+											<td>12-10-2018</td>
+											<td>1:10PM</td>
+											<td>
+												<span class="badge badge-warning">Pending</span>
+											</td>
+										</tr>
+										<tr>
+											<td>Siri</td>
+											<td>Daniel </td>
+											<td>Ortho</td>
+											<td>12-10-2018</td>
+											<td>1:30PM</td>
+											<td>
+												<span class="badge badge-danger">Cancelled</span>
+											</td>
+										</tr>
+										<tr>
+											<td>Rajesh</td>
+											<td>Manoj Kumar</td>
+											<td>Dental</td>
+											<td>12-10-2018</td>
+											<td>12:10PM</td>
+											<td>
+												<span class="badge badge-success">Completed</span>
+											</td>
+										</tr>
+										<tr>
+											<td>Riya</td>
+											<td>Daniel </td>
+											<td>Ortho</td>
+											<td>12-10-2018</td>
+											<td>1:10PM</td>
+											<td>
+												<span class="badge badge-warning">Pending</span>
+											</td>
+										</tr>
+										<tr>
+											<td>Siri</td>
+											<td>Daniel </td>
+											<td>Ortho</td>
+											<td>12-10-2018</td>
+											<td>1:30PM</td>
+											<td>
+												<span class="badge badge-danger">Cancelled</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- /Widget Item -->
+				</div>
+
+				<div class="row">
+					<!-- Widget Item -->
+					<div class="col-sm-6">
+						<div class="widget-area-2 proclinic-box-shadow">
+							<h3 class="widget-title">Appointments Status</h3>
+							<div id="donutMorris" class="chart-home"><svg height="255" version="1.1" width="543" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative; top: -0.1px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><path fill="none" stroke="#ffaa2a" d="M271.3,205.83333333333331A78.33333333333333,78.33333333333333,0,0,0,347.1949832110064,108.10766557342383" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#ffaa2a" stroke="#ffffff" d="M271.3,208.83333333333331A81.33333333333333,81.33333333333333,0,0,0,350.10159958930024,107.36498042517198L380.2981141860198,99.6493069405555A112.5,112.5,0,0,1,271.3,240Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#ef6e6e" d="M347.1949832110064,108.10766557342383A78.33333333333333,78.33333333333333,0,0,0,237.81043633901314,56.68644030337255" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#ef6e6e" stroke="#ffffff" d="M350.10159958930024,107.36498042517198A81.33333333333333,81.33333333333333,0,0,0,236.52785730518812,53.97443163414002L223.20328623156144,25.79967490377973A112.5,112.5,0,0,1,380.2981141860198,99.6493069405555Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#22c6ab" d="M237.81043633901314,56.68644030337255A78.33333333333333,78.33333333333333,0,0,0,271.2753908579517,205.8333294677383" stroke-width="2" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></path><path fill="#22c6ab" stroke="#ffffff" d="M236.52785730518812,53.97443163414002A81.33333333333333,81.33333333333333,0,0,0,271.2744483801711,208.83332931969426L271.26308628692755,244.99999420160748A117.5,117.5,0,0,1,221.0656545085197,21.27966045505883Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="271.3" y="117.5" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#3e5569" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 800 15px Arial;" font-size="15px" font-weight="800" transform="matrix(3.1677,0,0,3.1677,-588.1488,-266.8496)" stroke-width="0.31568180922920824"><tspan dy="3.199995517730713" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Cancelled</tspan></text><text x="271.3" y="137.5" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#3e5569" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font: 14px Arial;" font-size="14px" transform="matrix(2.3313,0,0,2.3313,-361.2194,-175.605)" stroke-width="0.42893616290802655"><tspan dy="3.200003147125244" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">45</tspan></text></svg></div>
+						</div>
+					</div>
+					<!-- /Widget Item -->
+					<!-- Widget Item -->
+					<div class="col-md-6">
+						<div class="widget-area-2 progress-status proclinic-box-shadow">
+							<h3 class="widget-title">Doctors Availability</h3>
+							<div class="table-responsive">
+								<table class="table table-bordered">
+									<thead>
+										<tr>
+											<th>Doctor</th>
+											<th>Speciality</th>
+											<th>Availability</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Rajesh</td>
+											<td>Dental</td>
+											<td>
+												<span class="badge badge-success">Available</span>
+											</td>
+										</tr>
+										<tr>
+											<td>Riya</td>
+											<td>Ortho</td>
+											<td>
+												<span class="badge badge-warning">On Leave</span>
+											</td>
+										</tr>
+										<tr>
+											<td>Siri</td>
+											<td>Skin</td>
+											<td>
+												<span class="badge badge-danger">Not Available</span>
+											</td>
+										</tr>
+										<tr>
+											<td>Rajesh</td>
+											<td>Dental</td>
+											<td>
+												<span class="badge badge-success">Available</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+						</div>
+					</div>
+					<!-- /Widget Item -->
+
+				</div>
+
+			</div>
+			<!-- /Main Content -->
+		</div>
+		<!-- /Page Content -->
+	</div>
+	<!-- Back to Top -->
+	<a id="back-to-top" href="https://www.konnectplugins.com/proclinic/Vertical/index.html#" class="back-to-top">
+		<span class="ti-angle-up"></span>
+	</a>
+	<!-- /Back to Top -->
+	
+	<!-- Jquery Library-->
+	<script src="./ProClinic-Bootstrap4 Hospital Admin_files/jquery-3.2.1.min.js.download"></script>
+	<!-- Popper Library-->
+	<script src="./ProClinic-Bootstrap4 Hospital Admin_files/popper.min.js.download"></script>
+	<!-- Bootstrap Library-->
+	<script src="./ProClinic-Bootstrap4 Hospital Admin_files/bootstrap.min.js.download"></script>
+	<!-- morris charts -->
+	<script src="./ProClinic-Bootstrap4 Hospital Admin_files/raphael-min.js.download"></script>
+	<script src="./ProClinic-Bootstrap4 Hospital Admin_files/morris.min.js.download"></script>
+	<script src="./ProClinic-Bootstrap4 Hospital Admin_files/custom-morris.js.download"></script>
+
+	<!-- Custom Script-->
+	<script src="./ProClinic-Bootstrap4 Hospital Admin_files/custom.js.download"></script>
+
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

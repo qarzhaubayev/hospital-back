@@ -86,7 +86,7 @@ class Doctor(User):
     specialize = models.CharField(max_length=200)
     category = models.CharField(max_length=200)
     photo = models.FileField(upload_to='images/')
-    schedule = models.JSONField(default=list)
+    # schedule = models.JSONField(default=list)
     appointment_duration = models.CharField(max_length=5)
     price = models.CharField(max_length=10)
     contact_number = models.CharField(max_length=12)
@@ -145,16 +145,21 @@ class Patient(User):
     surname = models.CharField(max_length=200)
     midname = models.CharField(max_length=200)
     birthday_date = models.CharField(max_length=10)
-    #iin_num = models.CharField(max_length=12, primary_key=True)
+    gender = models.CharField(max_length=10)
+
+    # iin_num = models.CharField(max_length=12, primary_key=True)
     id = models.CharField(max_length=12)
     blood_type = models.CharField(max_length=3)
     marital_status = models.CharField(max_length=8)
     contact_number = models.CharField(max_length=12)
     emergency_contact_number = models.CharField(max_length=12)
-    email = models.CharField(max_length=200, blank=True)
+    email = models.EmailField(max_length=200, blank=True)
     address = models.CharField(max_length=200)
 
     USERNAME_FIELD = "iin_num"
     REQUIRED_FIELD = ["name", "surname", "midname", "birthday_date", "id", "blood_type", "marital_status", "contact_number", "emergency_contact_number", "address", "password"]
     objects=PatientManager()
+
+    def __str__(self):
+        return self.name
 
